@@ -1,4 +1,4 @@
-# How to make Studio Item
+# Creating Custom Studio Item
 
 ## Related Document
 
@@ -105,17 +105,32 @@ You can easily start out making new Mod XML files by right-clicking in the folde
 </packer>
 ```
 
+!> The GUID, bundle name, build name should be **unique**, and you can only refer files in Asset Bundles in the Mod XML File.
+
 You can check the comment inside of the XML Code section above to see what to do.
 
 For more detailed information, you can check those documents for reference.
 
--   [XML File Structure](technical/xml-file.md)
--   [Auto-Path Lists](technical/autopath-list.md)
--   [XML List Types](technical/category-list.md)
+-   [XML File Structure](technical/xml-file.md) for general Mod File Information
+-   [Auto-Path Lists](technical/autopath-list.md) for `<folder auto-path>`
+-   [XML List Types](technical/category-list.md) for `<list type>` and `<item>`
 
 #### Using "Mod Scaffolding"
 
 ![](imgs/std_05.png)
+
+-   Go to the "hooh's Modding Tool" window and navigate to the "Mod Scaffolding".
+
+    ![1600689487533](images\1600689487533.png)
+
+-   Go to the prefab folder where prefabs are stored.
+
+-   Drag and drop prefabs to the "Prefabs to put in XML file". You can drag multiple objects by dragging objects right above the text.
+
+    ![1600689509177](images\1600689509177.png)
+
+-   As the title suggests, it will automatically register the prefabs you've dragged into the XML file.
+-   Adjust the big category and mid category number to what you want to use. be sure that those ids are not in use or you're going to have some bad time solving the conflict in the game.
 
 ### Build Mod
 
@@ -201,20 +216,7 @@ _Difficulty: Low_
 
 ### When you have to generate dozens of studio items into mod.xml
 
-_Difficulty: You're reading it again_
-
--   Go to the "hooh's Modding Tool" window and navigate to the "Mod Scaffolding".
-
-    ![1600689487533](images\1600689487533.png)
-
--   Go to the prefab folder where prefabs are stored.
-
--   Drag and drop prefabs to the "Prefabs to put in XML file". You can drag multiple objects by dragging objects right above the text.
-
-    ![1600689509177](images\1600689509177.png)
-
--   As the title suggests, it will automatically register the prefabs you've dragged into the XML file.
--   Adjust the big category and mid category number to what you want to use. be sure that those ids are not in use or you're going to have some bad time solving the conflict in the game.
+_Difficulty: Easy_
 
 ### When you have to make things multi colorable
 

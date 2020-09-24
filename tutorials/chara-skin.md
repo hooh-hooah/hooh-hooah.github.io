@@ -1,4 +1,4 @@
-# How to make Body Paint
+# Creating Custom Skin
 
 ## Related Document
 
@@ -9,9 +9,9 @@ If you need more basic information like setup folders or preparing hair assets, 
 -   [Getting Started with the hooh's Modding Tool](getting_started.md)
 -   [Setting up Folder](tutorials/gearing-up.md)
 
-## Steps
+## Step
 
-### Make A Texture
+### Making Texture
 
 First, fill the whole layer with white and go to the channel and make an alpha texture.
 
@@ -19,7 +19,7 @@ Here all that matters. The Alpha channel is the most important thing to make a b
 
 ![image-20200214072029064](images\image-20200214072029064.png)
 
-### Save Textures with Import
+### Importing Texture
 
 After making textures, Place all textures inside of the `tattoo` folder.
 
@@ -40,6 +40,19 @@ In the "Import Option" menu, set a few
 !> I recommend not to touch any compression options if you don't know what you're doing. Some compression option will make the texture lose its transparency! You can check [the Unity Engine's Document about texture compression](https://docs.unity3d.com/Manual/class-TextureImporterOverride.html) to see what's going on.
 
 ![image-20200214072527660](images\image-20200214072527660.png)
+
+### Understanding Skin Shader
+
+| texture | channel | description |
+| ------- | ------- | ----------- |
+| a       | b       | c           |
+
+you can find detailed information in here
+
+-   [ILLUSION Standard](technical/illusion-system.md)
+-   [ILLUSION Shader](technical/illusion-shader.md)
+
+### Previeing your skin Texture
 
 ### Setup Mod XML File
 
@@ -84,12 +97,8 @@ Then you're good to go. Press the big green button and to build the mod.
 
 It depends on your mod size, but it will play a nice sound to notify the packing is done after a few seconds or minutes.
 
-## Trouble Shooting
+### Testing your Skin Texture
+
+### Trouble Shooting
 
 !> If you can't find the issue in here then check [**Trouble Shooting**](tutorials/trouble-shooting.md) page.
-
-### Uh.. My Tatto is repeating all over the skin/face!
-
-The Texture's import option is wrong. All of the tattoo, chests, and other paint parts must be in `Clamp` Wrap Mode.
-
-You can set the **Wrap Mode** by clicking your Texture and search around the middle of the menu.
