@@ -5,6 +5,7 @@
     -   [Report Issue/Feedback](issue-feedback.md)
     -   [Goals and To-do](goals.md)
     -   [Changelogs](changelogs.md)
+    -   [Used Packages/Libraries](open-source.md)
 -   **Prepping Assets**
     -   [Creating Clothing Mesh](prepping/clothing-mesh.md)
     -   [Creating Hair Mesh](prepping/hair-mesh.md)
@@ -14,8 +15,8 @@
     -   [Trouble Shooting](tutorials/trouble-shooting.md)
     -   [Character Hair](tutorials/chara-hair.md)
     -   [Character Tattoo/Paint](tutorials/chara-paint.md)
-    -   [Character Eye Liner](tutorials/chara-top.md)
-    -   [Character Skin](tutorials/chara-top.md)
+    -   [Character Eye Liner](tutorials/chara-paint.md)
+    -   [Character Skin](tutorials/chara-paint.md)
     -   [Character Top](tutorials/chara-top.md)
     -   [Character Bottom](tutorials/chara-top.md)
     -   [Character Set Clothing](tutorials/chara-top.md)
