@@ -87,7 +87,7 @@ The button is in the `Quick Unity Macros` fold groups in the window. You can eas
 
 This button will register multiple selected items as `prefab` to the current folder.
 
-### Make mod.xml
+### Creating Mod XML
 
 ```xml
 <packer>
@@ -155,4 +155,4 @@ It depends on your mod size, but it will play a nice sound to notify the packing
 
 ### Trouble Shooting
 
-!> If you can't find the issue in here then check [**Trouble Shooting**](tutorials/trouble-shooting.md) page.
+!> If you can't find the issue here, then check [**Trouble Shooting**](tutorials/trouble-shooting.md) page.
