@@ -20,6 +20,8 @@
     -   [Character Top](tutorials/chara-top.md)
     -   [Character Skirt](tutorials/chara-skirt.md)
     -   [Character Glove/Shoes](tutorials/chara-gloves.md)
+    -   [Character Accessory](tutorials/chara-acc.md)
+    -   [Character Skinned Accessory](tutorials/chara-acc-skin.md)
     -   [Studio Items](tutorials/studio-item.md)
     -   [Studio Maps](tutorials/studio-map.md)
     -   [HS2 Main Game Map](tutorials/hs2-map.md)
@@ -32,6 +34,8 @@
     -   [Auto-Path Lists](technical/autopath-list.md)
     -   [XML List Types](technical/category-list.md)
     -   [ILLUSION Standard](technical/illusion-system.md)
+        -   [Honey Select 2 ADV](technical/adv-hs2.md)
+        -   [AI-Shoujyo ADV](technical/adv-ai.md)
     -   [ILLUSION Shader](technical/illusion-shader.md)
     -   [Optimization](technical/optimization.md)
 -   **Community**
