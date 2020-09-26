@@ -1,72 +1,107 @@
 # Creating Skinned Accessory
 
+?> Skinned Accessory has a dependency on the `Hooah` plugin. You need to notify people to download `Hooah` to use your mod.
+
+## What is Skinned Accessory?
+
+![](imgs/exp_low_00.png)
+
+Skinned Accessory is a plugin/mod that allows modders to make clothing working in the accessory slot.
+
+Skinned Accessory will allow people to add layers to their clothing or use another shader for the body's new overlay, such as a glowing tattoo.
+
 ## Related Documents
 
-This page only contains how to put clothing-like accessories into the game with adjustable attributes.
+This page only contains how to put accessories into the game with adjustable attributes.
 
-If you need more basic information like setup folders or preparing hair assets, please visit the pages below before continuing to read this document:
+If you need more basic information like setup folders or preparing hair assets, please visit the pages below before continuing to read this Document:
 
 -   [Getting Started with the hooh's Modding Tool](getting_started.md)
 
 -   [Setting up Folder](tutorials/gearing-up.md)
 
--   [Creating Clothing Mesh](prepping/clothing-mesh.md)
+-   [Character Top](tutorials/chara-top.md)
 
 ## Steps
 
-?> This tutorial only provides information about putting existing mesh to the main game. Please check [Creating Clothing Mesh](prepping/clothing-mesh.md) Document if you want to know how to make a clothing model.
+?> This tutorial only provides information about putting existing mesh to the main game. If you need a generic tutorial on creating a model, please check youtube for basic tutorials.
+
+### Setup Base
+
+![](imgs/acc_00.png)
+
+Initialize `Clothing Tester` from `Base Files`. After initiating the prefab to the scene, you'll see some inspector menu on the right side of the window.
+
+### Place Model
+
+You can place a model anywhere if you're making the skinned Accessory. Just make sure that your model is well-tested in the `Clothing Tester`. You can check more information at the bottom of [Character Top](tutorials/chara-top.md) Document.
 
 ### Initialize Component
 
-![](imgs/chara_00.png)
+![](imgs/acc_02.png)
 
-When you've done putting your mesh to the scene, click it, navigate the right panel, and click the `Initialize Modding Components > Common > Accessory` button.
+You need to unpack the model prefab first to create a new accessory prefab.
 
-Then the Modding Tool will automatically find the references in your model and initialize everything to make your model work in the game.
+![](imgs/sa_00.png)
+
+When you've done putting your mesh to the scene, click it, navigate the right panel, and click the `Initialize Modding Components > Common > Accessory` button and select `Skinned Accessory`.
+
+### Adjusting Option
+
+![](imgs/sa_01.png)
+
+Well, the Rest of the options are self-explanatory. Color 1,2,3 means enabling color adjustment 1,2,3 in the game.
+
+Like the other mods, it requires special shaders to make it support more than two colors.
+
+You can check information about color shaders in the [Shader Informations](technical/shaders.md) Document.
+
+### Optional: Generating the Thumbnail
+
+![](imgs/acc_05.png)
+
+You can generate thumbnails for the accessories you've made quickly with the help of thumbnail generator.
+
+You still can generate the thumbnail without the background or foreground, but I recommend to have your format to distinguish your mod from other mods.
+
+Unlike the studio thumbnail generator, the normal thumbnail generation will save its result to the `thumbs` folder of the folder where the project window is browsing.
+
+![](imgs/thum_00.png)
+
+The right amount of adjustment will generate fine thumbnails just enough to use for character maker UI.
+
+!> Make sure that those images you've made are **"Read/Write Enabled"** or unity will refuse to utilize your foreground/background texture. Otherwise, the Unity Editor will refuse to read the texture.
 
 ### Creating Mod XML
 
 ```xml
 <packer>
-    <guid>example.clothing.text</guid> <!-- please change guid! -->
-    <name>Example CLothing</name>
+    <guid>example.accessory.text</guid> <!-- please change guid! -->
+    <name>Example Accessory</name>
     <version>1.0.0</version>
     <author>My Name</author>
     <description>My first outfit mod</description>
+
+    <!-- This section will contain bundle information -->
     <bundles>
-        <folder auto-path="prefabs" from="prefabs" filter=".*?\.(psd|png|tif|prefab)"/>
-        <folder auto-path="thumbs" from="thumbs" filter=".*?\.(psd|png|tif)"/>
+        <folder auto-path="prefabs" from="prefabs" filter=".*\.prefab"/>
+        <folder auto-path="thumbs" from="thumbs" filter=".*\.png"/>
     </bundles>
+
+    <!-- This section will contain build information -->
     <build>
-        <!-- If you put your clothing inside of regular top category, use example below-->
-        <list type="ftop">
-            <item
-                    kind="0" possess="1" name="My First Outfit" state="0"
-                    coordinate="1" mesh-a="MyPrefab" en-us="0"
-                    no-bra="0" bodymask-bundle="0" bodymask-tex="0"
-                     bramask-bundle="0" bramask-tex="0" breakmask-tex="0"
-                    innermask-tb-bundle="0" innermask-tb-tex="0"
-                    innermask-b-bundle="0" innermask-b-tex="0"
-                    panstmask-bundle="0" panstmask-tex="0"
-                     bodymask-b-bundle="0" bodymask-b-tex="0"
-                    tex-main="MainTextureForMyOutfit"
-                     tex-mask="ColorMaskTextureForMyOutfit" tex-main2="0" tex-mask2="0"
-                    tex-main3="0" tex-mask3="0" hide-bottom="0" thumb="Thumbnail"
-            />
+        <list type="acchead">
+            <item kind="0" possess="1" name="My first accessory" mesh-a="accessory_asset_name" parent="N_Head" thumb="thumb_accessory_asset_name"/>
         </list>
-        <!-- If you put your clothing inside of inner top category, use example below-->
-		<list type="fintop">
-            <!-- if you set coordinate to "1", it becomes top/bottom set. -->
-			<item
-				kind="0" possess="2" name="[hooh] My Prefab" mesh-a="MyPrefab" state="0"
-				coordinate="0" overbra-type="0" bodymask-tex="0"
-				tex-main="MainTextureForMyOutfit" tex-mask="ColorMaskTextureForMyOutfit"
-				hide-bottom="0" thumb="Thumbnail"
-			/>
-		</list>
     </build>
 </packer>
 ```
+
+You can set the category and the accessory's default parent by changing the `parent` attribute in the `<item>` tag. But the skinned accessory will not care about the parent.
+
+So, in this case, choosing the parent is just choosing where the skinned accessory should be.
+
+All of the tag's possible values are in the [XML List Types](technical/category-list.md) Document.
 
 !> The GUID, bundle name, build name should be **unique**, and you can only refer files in Asset Bundles in the Mod XML File.
 
