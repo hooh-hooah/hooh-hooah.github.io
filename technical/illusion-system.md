@@ -20,5 +20,3 @@
 ## Honey Select 2
 
 -   HS2 is utilizing `ScriptedObject` more than previous game "AI-Shoujyo"
-
-## AI-Shoujyo

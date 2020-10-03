@@ -50,8 +50,11 @@
         -   [Common List](technical/category-list-skin.md)
         -   [Studio List](technical/category-list-studio.md)
     -   [ILLUSION Standard](technical/illusion-system.md)
-        -   [Honey Select 2 ADV](technical/adv-hs2.md)
-        -   [AI-Shoujyo ADV](technical/adv-ai.md)
+        -   **AI-Shoujyo**
+        -   [ADV Tables](technical/adv-ai.md)
+        -   [Map Techinfo](technical/ai-mapdev.md)
+        -   **Honey Select 2**
+        -   [ADV Tables](technical/adv-hs2.md)
     -   [ILLUSION Shader](technical/illusion-shader.md)
     -   [Optimization](technical/optimization.md)
 
