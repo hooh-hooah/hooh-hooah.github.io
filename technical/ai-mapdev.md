@@ -70,7 +70,7 @@ foreach (KeyValuePair<int, AssetBundleInfo> current in Singleton<Manager.Resourc
 	string mapName = current.Value.name;
 	CommCommandList.CommandInfo item = new CommCommandList.CommandInfo(mapName)
 	{
-        // when the map id is valid
+        // when the map instance is valid and the map id is different compared to the current map
 		Condition = (() => Singleton<Manager.Map>.IsInstance() && id != Singleton<Manager.Map>.Instance.MapID),
 		Event = delegate(int x)
 		{
@@ -119,4 +119,139 @@ foreach (KeyValuePair<int, AssetBundleInfo> current in Singleton<Manager.Resourc
 	};
 	list.Add(item);
 }
+```
+
+### Map Change Process
+
+This process is recreated by me with following the callstack of `LoadMap()`
+
+#### Request change the map
+
+```csharp
+Singleton<Game>.Instance.WorldData.MapID = mapID;
+Observable.FromCoroutine(() => this.ChangeMapCoroutine(mapID, onEndFadeIn, onCompleted), false).Subscribe<Unit>();
+```
+
+#### change the map with the coroutine
+
+```csharp
+private IEnumerator ChangeMapCoroutine(int mapID, Action onEndFadeIn = null, Action onCompleted = null) {
+    // hidden: Initialize the loading panel
+    // hidden: make loading panel visible with easing.
+    // hidden: Release animal information is AnimalManager instance is valid.
+	this.ReleaseMap();
+	this.ReleaseAgents();
+	this.Player.DisableEntity();
+	this.Merchant.StopBehavior();
+	this.Merchant.DisableEntity();
+	this.Merchant.DeactivateNavMeshElement();
+	yield return this.LoadMap(mapID);
+	yield return this.LoadNavMeshSource();
+	yield return this.LoadElements();
+	yield return this.LoadMerchantPoint();
+	yield return this.LoadEventPoints();
+	yield return this.LoadStoryPoints();
+	yield return this.LoadHousingObj(mapID);
+	this.SetVanishList();
+	this.BuildNavMesh();
+	this._pointAgent.CreateHousingWaypoint();
+	yield return this.LoadAnimalPoint();
+	yield return this.SetupPoint();
+	AnimalManager animalManager = Singleton<AnimalManager>.Instance;
+	yield return animalManager.SetupPointsAsync(this._pointAgent);
+    // is soundplayer manager instance is valid, refreshjukebox table.
+	yield return this.RefreshAsync();
+	WorldData worldData = Singleton<Game>.Instance.WorldData;
+	bool existsBackup = Singleton<Game>.Instance.ExistsBackup(worldData.WorldID);
+	yield return this.LoadAgents(worldData, existsBackup);
+	this.RefreshAgentStatus();
+	this.RefreshAnimalStatus();
+	yield return null;
+	this.RefreshActiveTimeRelationObjects();
+	this.InitActionPoints();
+	this.Player.PlayerController.CommandArea.InitCommandStates();
+	this.InitCommandable();
+	this.AddAppendTargetPoints(Singleton<Housing>.Instance.ActionPoints);
+	this.AddRuntimeFarmPoints(Singleton<Housing>.Instance.FarmPoints);
+	this.AddPetHomePoints(Singleton<Housing>.Instance.PetHomePoints);
+	this.AddJukePoints(Singleton<Housing>.Instance.JukePoints);
+	this.AddRuntimeCraftPoints(Singleton<Housing>.Instance.CraftPoints);
+	this.AddRuntimeLightSwitchPoints(Singleton<Housing>.Instance.LightSwitchPoints);
+	this.AddAppendHPoints(Singleton<Housing>.Instance.HPoints);
+	foreach (ActionPoint actionPoint in Singleton<Housing>.Instance.ActionPoints)
+	{
+		OffMeshLink[] componentsInChildren = actionPoint.GetComponentsInChildren<OffMeshLink>();
+		foreach (OffMeshLink offMeshLink in componentsInChildren)
+		{
+			offMeshLink.UpdatePositions();
+		}
+	}
+	this.LoadAgentTargetActionPoint();
+	this.LoadAgentTargetActor();
+	WorldData worldData2 = Singleton<Game>.Instance.WorldData;
+	bool existsBackup2 = Singleton<Game>.Instance.ExistsBackup(worldData2.WorldID);
+	yield return this.LoadAnimals(worldData2, existsBackup2);
+	this.RefreshAreaOpenLinkedObject();
+	this.RefreshTimeOpenLinkedObject();
+    // hidden: check sound data from the config.sounddata.sounds if sound data is null then refresh.
+	yield return this.LoadEnviroObject();
+	MapArea mapArea = this.Player.MapArea;
+	int? num = (mapArea != null) ? new int?(mapArea.AreaID) : null;
+	this.ResettingEnviroAreaElement(mapID, (num == null) ? 0 : num.Value);
+	MapArea mapArea2 = this.Player.MapArea;
+	int? num2 = (mapArea2 != null) ? new int?(mapArea2.AreaID) : null;
+	this.RefreshHousingEnv3DSEPoints(mapID, (num2 == null) ? 0 : num2.Value);
+	yield return new global::WaitForSecondsRealtime(1f);
+	WaitForSeconds waitTime = new WaitForSeconds(0.5f);
+	while (!this.WaitCompletionAgents())
+	{
+		yield return waitTime;
+	}
+	this._agentVanishAreaList = null;
+    // iterate agent with this._agentTable.Values and ActivateNavMeshAgent
+	yield return null;
+    // iterate agent with this._agentTable.Values and CalculateWaypoints
+	this.Player.ActivateNavMeshAgent();
+	this.Merchant.SetMerchantPoints(this._pointAgent.MerchantPoints);
+	this.Merchant.ChangeMap(mapID);
+	MapUIContainer.InitializeMinimap();
+	animalManager.StartAllAnimalCreate();
+	yield return Singleton<Resources>.Instance.HSceneTable.LoadHObj();
+    // mark animal manager activemapscene.
+    // collect illusion :^)
+	this.Merchant.EnableEntity();
+	this.Merchant.FirstAppear();
+	this.Player.EnableEntity();
+    // move player to the startpoint
+	Transform startPoint = this._pointAgent.ShipPoints[0].StartPointFromMigrate;
+	this.Player.NavMeshAgent.Warp(startPoint.position);
+	this.Player.Rotation = startPoint.rotation;
+
+	this.InitSearchActorTargetsAll();
+    // iterate this._agentTable and calculate the behavior again.
+	foreach (KeyValuePair<int, AgentActor> keyValuePair in this._agentTable)
+	this.Player.PlayerController.CommandArea.InitCommandStates();
+	this.Player.PlayerController.CommandArea.RefreshCommands();
+    // fadeout loading screen.
+    // yield null if timescale is zero.
+    // give an achievement
+    // invoke complete delegate
+	yield break;
+}
+```
+
+#### invoke the oncomplete delegate (if player is moving out from the boat.)
+
+```csharp
+// "that oncomplete delegate
+// after the map load, initialize other stuff
+this.PlayerController.ChangeState("Normal");
+this.CameraControl.EnabledInput = true;
+MapUIContainer.SetVisibleHUD(true);
+MapUIContainer.StorySupportUI.Open();
+if (this.PlayerController.CommandArea != null)
+{
+	this.PlayerController.CommandArea.enabled = true;
+}
+MapUIContainer.SetCommandLabelAcception(CommandLabel.AcceptionState.InvokeAcception);
 ```
