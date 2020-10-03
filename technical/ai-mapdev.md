@@ -48,3 +48,75 @@ else
 	this.IslandName.text = "廃墟の島";
 }
 ```
+
+### Data Strcture
+
+#### Map Information
+
+The map information is listed with `ExcelData`. which can be integrated with the sideloader plugin.
+
+has 5 columns:
+ID, element1, element2, element3, element4
+
+inserts the data to the `Singleton<Manager.Resources>.Instnace.Map.MapList[key] = value`
+`Manager.Resources.MapTables = Singleton<Manager.Resources>.Instnace.Map`
+
+### Map Change Dialog
+
+```csharp
+foreach (KeyValuePair<int, AssetBundleInfo> current in Singleton<Manager.Resources>.Instance.Map.MapList)
+{
+	int id = current.Key;
+	string mapName = current.Value.name;
+	CommCommandList.CommandInfo item = new CommCommandList.CommandInfo(mapName)
+	{
+        // when the map id is valid
+		Condition = (() => Singleton<Manager.Map>.IsInstance() && id != Singleton<Manager.Map>.Instance.MapID),
+		Event = delegate(int x)
+		{
+            // play ok sound
+			Singleton<Manager.Resources>.Instance.SoundPack.Play(SoundPack.SystemSE.OK_S);
+            // check the user wants to change the map
+			ConfirmScene.Sentence = string.Format("{0}に移動しますか？", mapName);
+            // setup yes click event
+			ConfirmScene.OnClickedYes = delegate
+			{
+                // on click yes - play nice sound
+				Singleton<Manager.Resources>.Instance.SoundPack.Play(SoundPack.SystemSE.OK_L);
+                // clear all the command list
+				MapUIContainer.SetActiveCommandList(false);
+				this.SetScheduledInteractionState(false);
+				this.ReleaseInteraction();
+				MapUIContainer.SetCommandLabelAcception(CommandLabel.AcceptionState.None);
+
+                // save map profile
+				Singleton<MapScene>.Instance.SaveProfile(true);
+
+                // invoke change map
+				Singleton<Manager.Map>.Instance.ChangeMap(id, null, delegate
+				{
+                    // after the map load, initialize other stuff
+					this.PlayerController.ChangeState("Normal");
+					this.CameraControl.EnabledInput = true;
+					MapUIContainer.SetVisibleHUD(true);
+					MapUIContainer.StorySupportUI.Open();
+					if (this.PlayerController.CommandArea != null)
+					{
+						this.PlayerController.CommandArea.enabled = true;
+					}
+					MapUIContainer.SetCommandLabelAcception(CommandLabel.AcceptionState.InvokeAcception);
+				});
+			};
+            // setup no click event
+			ConfirmScene.OnClickedNo = delegate
+			{
+                // on click no - just play the sound
+				Singleton<Manager.Resources>.Instance.SoundPack.Play(SoundPack.SystemSE.Cancel);
+			};
+            // load the dialog
+			Singleton<Game>.Instance.LoadDialog();
+		}
+	};
+	list.Add(item);
+}
+```

@@ -8,6 +8,10 @@
     That is perfect entry to find all of assets what game is referencing from.
 -   The texture coloring and pattern is rendered with Render Target Texture and shader.
 
+### Resource Manager
+
+-   The resource manager stores it's information with something called `DefinePack`. `DefinePack` is a Serializable class the stores all the information of where the resources are located.
+
 ### ADV
 
 -   ADV system is one of the system ILLUSION uses for generic events in the game.
