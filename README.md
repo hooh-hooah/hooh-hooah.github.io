@@ -1,6 +1,9 @@
-# hooh's Modding Tool
+
+![](https://raw.githubusercontent.com/IL-Modding-Tool/Public-Resources/master/ModdingTool-wide.webp)
 
 ?> If you're getting the old version of document constantly, Try to refresh the page with Ctrl+Shift+R.
+
+# hooh's Modding Tool
 
 ## Welcome
 
