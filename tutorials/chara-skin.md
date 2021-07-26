@@ -82,38 +82,15 @@ Assign Textures that you want to test in the component. You can assign textures 
     </build>
 </packer>
 ```
+[xml common tip](../common/xml-common.md ':include')
 
-!> The GUID, bundle name, build name should be **unique**, and you can only refer files in Asset Bundles in the Mod XML File.
+### Building the Mod
 
-You can check the comment inside of the XML Code section above to see what to do.
+[building the mod](../common/building-mod.md ':include')
 
-For more detailed information, you can check those documents for reference.
+[trouble shooting](../common/trouble-shooting.md ':include')
 
--   [XML File Structure](technical/xml-file.md) for general Mod File Information
--   [Auto-Path Lists](technical/autopath-list.md) for `<folder auto-path>`
--   [XML List Types](technical/category-list.md) for `<list type>` and `<item>`
-
-### Building Mod
-
-![](imgs/mod_00.png)
-
-Drag and drop your custom mod XML file into the mod builder's target window.
-
-After setting the build target, check if the output path is where you desire to put your custom zipmod archive.
-
-If everything is okay, validate your XML file if you didn't make any mistake inside the XML file.
-
-Unless a mod packer cannot find an asset or has some issue while resolving the Asset Bundle's path, it says nothing.
-
-Then you're good to go. Press the big green button and to build the mod.
-
-It depends on your mod size, but it will play a nice sound to notify the packing is done after a few seconds or minutes.
-
-## Trouble Shooting
-
-!> If you can't find the issue here, then check [**Trouble Shooting**](tutorials/trouble-shooting.md) page.
-
-### Uh.. My Tatto is repeating all over the skin/face!
+### My Tattoo is repeating all over the skincare
 
 The Texture's import option is wrong. All of the tattoo, chests, and other paint parts must be in `Clamp` Wrap Mode.
 

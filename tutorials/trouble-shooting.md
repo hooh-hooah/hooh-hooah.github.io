@@ -1,6 +1,8 @@
 # Trouble Shooting
 
-Was it not going well? It's time to fix some problems.
+Something is not going well? Fortunately I already suffered from the issues that you've been experiencing.
+
+Let's see if your issue is one of the case.
 
 ## Things we can't fix.
 

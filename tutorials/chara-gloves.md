@@ -142,29 +142,12 @@ Unlike the studio thumbnail generator, the normal thumbnail generation will save
 </packer>
 ```
 
-!> The GUID, bundle name, build name should be **unique**, and you can only refer files in Asset Bundles in the Mod XML File.
+[xml common tip](../common/xml-common.md ':include')
 
-You can check the comment inside the XML Code section above to see what to do.
+### Building the Mod
 
-For more detailed information, you can check those documents for reference.
+[building the mod](../common/building-mod.md ':include')
 
--   [XML File Structure](/technical/xml-file.md) for general Mod File Information
--   [Auto-Path Lists](/technical/autopath-list.md) for `<folder auto-path>`
--   [XML List Types](/technical/category-list.md) for `<list type>` and `<item>`
-
-### Build Mod
-
-![](imgs/mod_00.png)
-
-Drag and drop your custom mod XML file into the mod builder's target window.
-
-After setting the build target, check if the output path is where you desire to put your custom zipmod archive.
-
-If everything is okay, validate your XML file if you didn't make any mistake inside the XML file.
-
-Unless a mod packer cannot find an asset or has some issue while resolving the Asset Bundle's path, it says nothing.
-
-Then you're good to go. Press the big green button and to build the mod.
 
 ### Test In-Game
 
@@ -172,6 +155,5 @@ Test your clothes working in-game.
 
 I recommend 2155x's makersearch to save your time
 
-### Trouble Shooting
 
-!> If you can't find the issue here, then check [**Trouble Shooting**](/tutorials/trouble-shooting.md) page.
+[trouble shooting](../common/trouble-shooting.md ':include')

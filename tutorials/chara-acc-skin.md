@@ -96,38 +96,13 @@ The right amount of adjustment will generate fine thumbnails just enough to use 
     </build>
 </packer>
 ```
+You can set the category, and the accessory's default parent by changing the `parent` attribute in the `<item>` tag.
 
-You can set the category, and the accessory's default parent by changing the `parent` attribute in the `<item>` tag. The skinned accessory will not care about the parent.
+[xml common tip](../common/xml-common.md ':include')
 
-So, in this case, choosing the parent is just choosing where the skinned accessory should be.
+### Building the Mod
 
-All the tag's possible values are in the [XML List Types](/technical/category-list.md) Document.
-
-!> The GUID, bundle name, build name should be **unique**, and you can only refer files in Asset Bundles in the Mod XML File.
-
-You can check the comment inside the XML Code section above to see what to do.
-
-For more detailed information, you can check those documents for reference.
-
--   [XML File Structure](/technical/xml-file.md) for general Mod File Information
--   [Auto-Path Lists](/technical/autopath-list.md) for `<folder auto-path>`
--   [XML List Types](/technical/category-list.md) for `<list type>` and `<item>`
-
-### Build Mod
-
-![](imgs/mod_00.png)
-
-Drag and drop your custom mod XML file into the mod builder's target window.
-
-After setting the build target, check if the output path is where you desire to put your custom zipmod archive.
-
-If everything is okay, validate your XML file if you didn't make any mistake inside the XML file.
-
-Unless a mod packer cannot find an asset or has some issue while resolving the Asset Bundle's path, it says nothing.
-
-Then you're good to go. Press the big green button and to build the mod.
+[building the mod](../common/building-mod.md ':include')
 
 
-### Trouble Shooting
-
-!> If you can't find the issue here, then check [**Trouble Shooting**](/tutorials/trouble-shooting.md) page.
+[trouble shooting](../common/trouble-shooting.md ':include')
