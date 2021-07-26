@@ -1,4 +1,4 @@
--   [**Welcome**](/)
+-   [**Welcome**](README.md)
 -   **General**
     -   [Getting Started](getting_started.md)
     -   [General Questions](general-question.md)
