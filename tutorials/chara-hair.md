@@ -1,22 +1,20 @@
 # Creating Custom Hairs
 
-!> **The New Modding Tool’s Hair Support is postponed to September 30 due to SB3Utility Version Update and stabilizing.** You won’t be able to mod new hair until the update. Sorry for the inconvenience.
-
 ## Related Documents
 
 This page only contains how to put hair models into the game with adjustable attributes.
 
 If you need more basic information like setup folders or preparing hair assets, please visit the pages below before continuing to read this document:
 
--   [Getting Started with the hooh's Modding Tool](getting_started.md)
--   [Setting up Folder](tutorials/gearing-up.md)
--   [Preparing Hair Assets](prepping/hair-mesh.md)
+-   [Getting Started with the hooh's Modding Tool](/getting_started.md)
+-   [Setting up Folder](/tutorials/gearing-up.md)
+-   [Preparing Hair Assets](/prepping/hair-mesh.md)
 
 ## Steps
 
 ### Putting Assets
 
-!> `.OBJ` format does not supports FK studio items. Make sure that you're importing `.FBX` format 3D Mesh Files to make FK works on the model.
+!> `.OBJ` format does not support FK studio items. Make sure that you're importing `.FBX` format 3D Mesh Files to make FK works on the model.
 
 ![](imgs/std_00.png)
 
@@ -31,12 +29,12 @@ It would be best to import all textures, models, and all other required assets t
 3. Go to folder where you stored your hair textures.
 4. Press Assign Textures or Drag and Drop textures manually to Textures Area.
    Assign Textures will seek for:
-    - Any Texture that contains word "color" in the name but does not have word "mask" in the name
+    - Any Texture that contains word "color" in the name but does not have "mask" in the name.
     - Any Texture that has "normal" in the name.
     - Any Texture that has "ao", "ambient", "occlusion" in the name.
     - Any Texture that has "noise" in the name.
     - Any Texture that has "colormask" in the name.
-5. Check if all textures are assigned.
+5. Check if material has all textures.
 6. Press Initialize
 
 ### Setup Mod XML File
@@ -58,13 +56,13 @@ It would be best to import all textures, models, and all other required assets t
 
 !> The GUID, bundle name, build name should be **unique**, and you can only refer files in Asset Bundles in the Mod XML File.
 
-You can check the comment inside of the XML Code section above to see what to do.
+You can check the comment inside the XML Code section above to see what to do.
 
 For more detailed information, you can check those documents for reference.
 
--   [XML File Structure](technical/xml-file.md) for general Mod File Information
--   [Auto-Path Lists](technical/autopath-list.md) for `<folder auto-path>`
--   [XML List Types](technical/category-list.md) for `<list type>` and `<item>`
+-   [XML File Structure](/technical/xml-file.md) for general Mod File Information
+-   [Auto-Path Lists](/technical/autopath-list.md) for `<folder auto-path>`
+-   [XML List Types](/technical/category-list.md) for `<list type>` and `<item>`
 
 ### Build Mod
 
@@ -80,13 +78,11 @@ Unless a mod packer cannot find an asset or has some issue while resolving the A
 
 Then you're good to go. Press the big green button and to build the mod.
 
-It depends on your mod size, but it will play a nice sound to notify the packing is done after a few seconds or minutes.
-
 ## Caution
 
-1. You can't include assetbundle-loaded materials into assetbundle buildlist.
-2. All of preview is temporary to the session. Restarting unity might break the texture.
+1. You can't include AssetBundle-loaded materials into AssetBundle BuildList.
+2. All preview is temporary to the session. Restarting unity might break the texture.
 
 ### Trouble Shooting
 
-!> If you can't find the issue here, then check [**Trouble Shooting**](tutorials/trouble-shooting.md) page.
+!> If you can't find the issue here, then check [**Trouble Shooting**](/tutorials/trouble-shooting.md) page.

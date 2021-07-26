@@ -4,7 +4,7 @@ Was it not going well? It's time to fix some problems.
 
 ## Things we can't fix.
 
-### The hair shader is blocky! (Dithering Hair Shader)
+### The hair shader is ugly, It's covered with the dots! (Dithering Hair Shader)
 
 Dithering is something we need to bear. "Deal with it."
 
@@ -20,20 +20,20 @@ There are two possibilities:
 
 -   You're trying to build the mod while the game is open. Once the game is running, every single zipmod is write-locked, so you can't update your mod.
 -   When the modding tool failed to validate your assets, it will refuse to build the mod to save your time.
-    You can see the why mod packer is failed to resovle mod assets.
+    You can see why mod packer is failing to resolve the mod assets.
 
 ### Studio Lights not affecting to your mods
 
-Check your studio item's layer. Studio Lights will only lit items with a specific layer.
+Check your studio item's layer. Studio Lights will only affect items with a specific layer.
 
--   Map Layer will only lit by Map Lights.
--   Chara Layer will only lit by Chara Lights.
+-   Map Layer will only get affected by Map Lights.
+-   Chara Layer will only get affected by Chara Lights.
 
 ### SB3Utility Fails
 
 When SB3Utility failed to find external texture, SB3Utility might fail to run.
 Currently, SB3Utility can't reference external texture from scratch (Based on the author's comment).
-To use ILLUSION's hair shader with external texture, the hair mesh material must reference all of the textures to swap.
+To use ILLUSION's hair shader with external texture, the hair mesh material must reference all the textures to swap.
 
 ### I can see my mod in the creator, but it won't load when I click it
 
@@ -52,11 +52,11 @@ There are a few things that are responsible for that issue:
 ### The model's reflection is weird.
 
 Please recalculate the normal of your asset.
-It's called 'Bad Normal'. If your item looks like a googled result, please reference its fix in youtube or stack overflow.
+It's called 'Bad Normal'. If your item looks like a googled result, please reference its fix in YouTube or stack overflow.
 
 ### It looks all right in 3D Software, but the clothing/FK item going nut in the Unity Editor/Main-Game
 
-The Unity Engine only allows four vertex groups per vertex. Which means only four bones can influence to vertex's position.
+The Unity Engine only allows four vertex groups per vertex which means only four bones can influence to vertex's position.
 It would be best to clean up vertex groups before exporting the 3d model to the unity engine.
 There is no way to lift this limit unless we get 2019.x+ Unity Engine.
 

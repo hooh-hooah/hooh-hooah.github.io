@@ -6,15 +6,15 @@ This page only contains how to put hair models into the game with adjustable att
 
 If you need more basic information like setup folders or preparing hair assets, please visit the pages below before continuing to read this document:
 
--   [Getting Started with the hooh's Modding Tool](getting_started.md)
+-   [Getting Started with the hooh's Modding Tool](/getting_started.md)
 
--   [Setting up Folder](tutorials/gearing-up.md)
+-   [Setting up Folder](/tutorials/gearing-up.md)
 
 ## Additional Notes for Preparing the Asset
 
 For gloves and shoes, If you're the Blender user, I recommend using the `Mirror` and `Lattice` Modifier for creating gloves and shoes.
 
-The `Lattice Modifier` will allow you to modify and deform whole meshes without destroying the model's original shape and topology. It will save a lot of time to make the mesh fit the base body mesh. The same rule applies to tops and bottom outfit meshes.
+The `Lattice Modifier` will allow you to modify and deform whole meshes without destroying the model's original shape and topology. It will save a lot of time to make the mesh fit the base body mesh. The same rule applies top and bottom outfit meshes.
 
 The `Mirror Modifier` will allow you to copy the mesh and mirror the vertex groups while keeping both gloves and shoe's information the same.
 
@@ -26,9 +26,9 @@ The `Mirror Modifier` will allow you to copy the mesh and mirror the vertex grou
 
 In this Document, I assume that you've read the previous Document that lets you know how to make the 3d model for character clothing.
 
-If you haven't checked the Document yet, here is the link to the Document: [Creating Clothing Mesh](prepping/clothing-mesh.md)
+If you haven't checked the Document yet, here is the link to the Document: [Creating Clothing Mesh](/prepping/clothing-mesh.md)
 
-First, put the model to the scene. The hierarchy does not matter, But make sure that `Clothing Tester` and your clothing are in the same position, angles, and scale.
+First, put the model to the scene. The hierarchy does not matter, But make sure that `Clothing Tester`, and you're clothing are in the same position, angles, and scale.
 
 ![](imgs/glv_00.png)
 
@@ -58,11 +58,11 @@ Just in case when you didn't set things as the Document, you can manually review
 
     Each "Texture Render Object" group represents for each set of diffuse and colormask in the Mod XML File.
 
-    But most of the case, we're going to use a single texture for the clothing so check that every renderer listed in Texture 1 Render Object.
+    Most of the case, we're going to use a single texture for the clothing so check that every renderer listed in Texture 1 Render Object.
 
 -   **Options**
 
-    You can assign togglable optional meshes for the clothing but remember that you can't toggle optional state in-game.
+    You can assign toggleable optional meshes for the clothing but remember that you can't toggle optional state in-game.
 
 -   **Cloth Object Assignment**
 
@@ -72,11 +72,11 @@ Just in case when you didn't set things as the Document, you can manually review
 
     Well, as the title says, this is the color information of your clothing. If you enable each color option, you can color your outfit in the game.
 
-    Unfortunately, you can't adjust a few sliders in the game if you're using the standard shader. To use all of the game options, you must use `Clothing Shader Replica` for your clothing material.
+    Unfortunately, you can't adjust a few sliders in the game if you're using the standard shader. To use all the game options, you must use `Clothing Shader Replica` for your clothing material.
 
-    You can find all of the included shader information inside the [Shader Informations](technical/shaders.md) Document.
+    You can find all the included shader information inside the [Shader Information](/technical/shaders.md) Document.
 
-    You can find all of the information about the included shader inside the [Shader Informations](technical/shaders.md) Document.
+    You can find all the information about the included shader inside the [Shader Information](/technical/shaders.md) Document.
 
 ### Setting Colormask
 
@@ -84,13 +84,13 @@ AI/HS2 utilizes custom colormask texture to color the clothing's texture with va
 
 If you don't want to struggle with setting up colormask, you can draw a black dot and save it as png and call it colormask.
 
-You can check [**ILLUSION Shader**](technical/illusion-shader.md?id=texturepattern-rendering-clothing) document for more detailed information about colormask
+You can check [**ILLUSION Shader**](/technical/illusion-shader.md) document for more detailed information about colormask
 
 ### Register Prefab
 
-Drag your Gameobjects to the Project folder. Put your clothing model in the `prefabs` folder in your modding directory.
+Drag your GameObjects to the Project folder. Put your clothing model in the `prefabs` folder in your modding directory.
 
-But if you have more than one clothing, I recommend you to create folders like this:
+If you have more than one clothing, I recommend you to create folders like this:
 
 ```
 outfit01
@@ -105,7 +105,7 @@ The Modding Tool can distinguish the same name assets with a hint, But you must 
 
 You can generate thumbnails for the accessories you've made quickly with the help of thumbnail generator.
 
-You still can generate the thumbnail without the background or foreground, but I recommend to have your format to distinguish your mod from other mods.
+You still can generate the thumbnail without the background or foreground, but I recommend having your format to distinguish your mod from other mods.
 
 Unlike the studio thumbnail generator, the normal thumbnail generation will save its result to the `thumbs` folder of the folder where the project window is browsing.
 
@@ -144,13 +144,13 @@ Unlike the studio thumbnail generator, the normal thumbnail generation will save
 
 !> The GUID, bundle name, build name should be **unique**, and you can only refer files in Asset Bundles in the Mod XML File.
 
-You can check the comment inside of the XML Code section above to see what to do.
+You can check the comment inside the XML Code section above to see what to do.
 
 For more detailed information, you can check those documents for reference.
 
--   [XML File Structure](technical/xml-file.md) for general Mod File Information
--   [Auto-Path Lists](technical/autopath-list.md) for `<folder auto-path>`
--   [XML List Types](technical/category-list.md) for `<list type>` and `<item>`
+-   [XML File Structure](/technical/xml-file.md) for general Mod File Information
+-   [Auto-Path Lists](/technical/autopath-list.md) for `<folder auto-path>`
+-   [XML List Types](/technical/category-list.md) for `<list type>` and `<item>`
 
 ### Build Mod
 
@@ -166,8 +166,6 @@ Unless a mod packer cannot find an asset or has some issue while resolving the A
 
 Then you're good to go. Press the big green button and to build the mod.
 
-It depends on your mod size, but it will play a nice sound to notify the packing is done after a few seconds or minutes.
-
 ### Test In-Game
 
 Test your clothes working in-game.
@@ -176,4 +174,4 @@ I recommend 2155x's makersearch to save your time
 
 ### Trouble Shooting
 
-!> If you can't find the issue here, then check [**Trouble Shooting**](tutorials/trouble-shooting.md) page.
+!> If you can't find the issue here, then check [**Trouble Shooting**](/tutorials/trouble-shooting.md) page.

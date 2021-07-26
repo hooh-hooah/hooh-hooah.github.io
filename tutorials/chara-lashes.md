@@ -6,12 +6,12 @@ This page only contains how to put hair models into the game with adjustable att
 
 If you need more basic information like setup folders or preparing hair assets, please visit the pages below before continuing to read this Document:
 
--   [Getting Started with the hooh's Modding Tool](getting_started.md)
--   [Setting up Folder](tutorials/gearing-up.md)
+-   [Getting Started with the hooh's Modding Tool](/getting_started.md)
+-   [Setting up Folder](/tutorials/gearing-up.md)
 
 ## Steps
 
-### Creating Textrure
+### Creating Texture
 
 ![](imgs/eyl_00.png)
 
@@ -23,13 +23,13 @@ ILLUSION's shaders are using custom textures for the face textures. So, You need
 | Green   | Glossiness (Multiply)      |
 | Blue    | Colormask (Multiply)       |
 
-Don't forget to set your image to 16-bit Color Depth. Otherwise, you're going to get a lot of blocky artifacts to your custom Texture.
+Don't forget to set your image to 16-bit Color Depth. Otherwise, you're going to get a lot of block-like artifacts to your custom Texture.
 
 ### Importing Texture
 
 ![](imgs/eyl_01.png)
 
-Save the Textures you've made to your custom Mod Folder. You can see how to set up the folder in the [Setting up Folder](tutorials/gearing-up.md) Document.
+Save the Textures you've made to your custom Mod Folder. You can see how to set up the folder in the [Setting up Folder](/tutorials/gearing-up.md) Document.
 
 In this case, I'm going to save all of my textures into the `textures` folder.
 
@@ -41,8 +41,8 @@ Change a few options in the inspector menu.
 -   **Alpha is Transparency** → NO
 -   **Streaming Mip Map** → NO
 -   **Generate Mip Maps**
-    -   Disabling Mip Maps: Can get the crisp Texture. But the Texture might look jagged in low resolution or far distance.
-    -   Enabling Map Maps: Can get consistent quality any distance. But the Texture might look blurry.
+    -   Disabling Mip Maps: Can get the crisp Texture. The Texture might look jagged in low resolution or far distance.
+    -   Enabling Map Maps: Can get consistent quality any distance. The Texture might look blurry.
 -   **Wrap Mode** → Clamp
 
 !> I recommend not to touch any compression options if you don't know what you're doing. Some compression option will make the Texture lose its transparency! You can check [the Unity Engine's Document about texture compression](https://docs.unity3d.com/Manual/class-TextureImporterOverride.html) to see what's going on.
@@ -70,7 +70,7 @@ Assign Textures that you want to test in the component. You can assign textures 
         <folder from="thumbs" auto-path="thumbs" filter=".+\.(png|tga|tif|psd)"/>
     </bundles>
     <build>
-        <!-- CUstom Eyelashes are for all genders. -->
+        <!-- Custom Eyelashes are for all genders. -->
         <list type="seyelash">
             <item name="My Custom EyeLashes" tex-a="my_texture_name" thumb="my_thumbnail_name"/>
         </list>
@@ -82,13 +82,13 @@ In this case, Each custom eyelashes only requires one file per an item in the li
 
 !> The GUID, bundle name, build name should be **unique**, and you can only refer files in Asset Bundles in the Mod XML File.
 
-You can check the comment inside of the XML Code section above to see what to do.
+You can check the comment inside the XML Code section above to see what to do.
 
 For more detailed information, you can check those documents for reference.
 
--   [XML File Structure](technical/xml-file.md) for general Mod File Information
--   [Auto-Path Lists](technical/autopath-list.md) for `<folder auto-path>`
--   [XML List Types](technical/category-list.md) for `<list type>` and `<item>`
+-   [XML File Structure](/technical/xml-file.md) for general Mod File Information
+-   [Auto-Path Lists](/technical/autopath-list.md) for `<folder auto-path>`
+-   [XML List Types](/technical/category-list.md) for `<list type>` and `<item>`
 
 ### Building Mod
 
@@ -104,14 +104,12 @@ Unless a mod packer cannot find an asset or has some issue while resolving the A
 
 Then you're good to go. Press the big green button and to build the mod.
 
-It depends on your mod size, but it will play a nice sound to notify the packing is done after a few seconds or minutes.
-
 ## Trouble Shooting
 
-!> If you can't find the issue here, then check [**Trouble Shooting**](tutorials/trouble-shooting.md) page.
+!> If you can't find the issue here, then check [**Trouble Shooting**](/tutorials/trouble-shooting.md) page.
 
-### Uh.. My Tatto is repeating all over the skin/face!
+### My Tattoo is repeating all over the skincare
 
-The Texture's import option is wrong. All of the tattoo, chests, and other paint parts must be in `Clamp` Wrap Mode.
+The Texture's import option is wrong. All the tattoo, chests, and other paint parts must be in `Clamp` Wrap Mode.
 
 You can set the **Wrap Mode** by clicking your Texture and search around the middle of the menu.
