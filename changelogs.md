@@ -6,7 +6,7 @@
 
 ![](https://github.com/IL-Modding-Tool/Public-Resources/blob/master/edgy-breaking-changes.gif?raw=true)
 
-#### :warning: ​**BREAKING CHANGES** :warning:
+#### :warning: **BREAKING CHANGES** :warning:
 
 * ***Overall structure of the Modding Tool has changed!***
 
@@ -16,14 +16,14 @@
 
   * Why?
 
-    To prevent things like this happen again, I've separated most of the editor codes into multiple Unity Packages. So we can update the codes separately later without screwing up everything agian.
+    To prevent things like this happen again, I've separated most of the editor codes into multiple Unity Packages. So we can update the codes separately later without screwing up everything again.
 
 * ***Modding Tool .xml file's Extension has changed!***
   ![](https://github.com/IL-Modding-Tool/Public-Resources/blob/master/xml-to-sxml.png?raw=true)
 
   * Why?
 
-    **Because Unity won't let me to add Scripted Importer for .xml files:** so I had no choice.
+    **Because Unity won't let me to add Scripted Importer for .xml files.** so I had no choice.
 
   * How to migrate?
 
@@ -33,15 +33,15 @@
 #### General Changes
 
 * Improved mod validation
-  * **Now mod validation check is automated.** Which means you don't have to constantly press check to see if the mod will be compile or not. Neat, Isn't it?
-* Changed `SideloaderMod` class as `SerializedObject`. This object will be automatically imported if the mod.xml file is marked as sxml. (Related with the breaking changes.)
+  * **Now the modding tool will automatically validate sxml files.** Which means you don't have to constantly press check to see if the mod will be compiled or not. Neat, Isn't it?
+* Changed `SideloaderMod` class as `SerializedObject`. This object will be automatically imported if the mod.xml file is sxml. (Related with the breaking changes.)
 * Fixed most of the Package Issues by fixing everything as separate fork. Since the engine version is "Fixed", We really don't have to worry about the future supports. (Actually, I will take care of it mostly.)
 * Fixed some Issues related with List Generation
   * Fixed that few male clothing list generation not working correctly.
   * Fixed that few female clothing list generation not working correctly.
 * Removed various unused code.
 * Now you can build the mod with the sxml files.
-* Countless of bug fixes.
+* Countless bug fixes.
 
 ## 0.6.0
 
@@ -62,7 +62,7 @@
   - Added RMA Shader Set (Unreal Format), Modularized AIHS Shader Parameters
   - Reorganized base files, Added Male Clothing base
 - Basic In-Game Modding Supports
-  - Added helper method for the AI Furnitures and Optimized the FindAssist
+  - Added helper method for the AI Furniture and Optimized the FindAssist
   - Added AI Main-game map support.
   - Reworked Heels workflow - Added Heels Preview and New Heels Example file
 - Added Few Developer Features
@@ -70,8 +70,6 @@
   - Added Command Enum
 - Fixed ItemComponent Animation Initialization
 - Now Thumbnail Generator add overlay/underlay on existing image.
-
-If there is some issues, I'll try to fix those bugs within a month. Feel free to report if therer is any issues with the modding tools.
 
 ## 0.5.0
 
@@ -83,7 +81,7 @@ If there is some issues, I'll try to fix those bugs within a month. Feel free to
 -   Added and Integrated Image Compression Library with Item Thumbnail Generator
 -   Reworked and Improved Mod Packer.
     -   All Mod Packing/Validation has moved to the `SideloaderMod` class.
-    -   Legacy Mod XML is compatible. But it is recommended to do little work to legacy mods.
+    -   Legacy Mod XML is compatible. It is recommended to do little work to legacy mods.
     -   Improved Mod XML and Asset Validation. Now it can detect resolved AssetBundles when you make new Mod Packer Class
     -   Improved Automation and Quality of Life Changes.
     -   Added Material Editor Support and Automation
@@ -96,7 +94,7 @@ If there is some issues, I'll try to fix those bugs within a month. Feel free to
 -   Added various ILLUSION shader preview
 -   Added Map Info automatic initialization
 -   Added Various Accessory Automatic initialization
--   Added Map Event Automatic Generation and Packing (All automatic, no interaction is needed)
+-   Added Map Event Automatic Generation and Packing (No interaction required.)
 -   Improved Clothing Testing Methods. Now it's not dependent to the scene. Now it's a just prefab
 -   Added ADV Dump Function (For Advanced Developers)
 -   Removed Legacy Mod Packer Code
@@ -121,7 +119,7 @@ If there is some issues, I'll try to fix those bugs within a month. Feel free to
 
 -   Reworked ColorableObjects shader. It's now can be used for Accessory and Studio Items.
 -   Added Thumbnail Generator.
--   Reworked XML Helper and it's less confusing now.
+-   Reworked XML Helper, and it's less confusing now.
 -   Added Accessory Component Custom Inspector.
 -   Fixed ItemComponents are being weird.
 -   Reworked Mod Files Validator.
@@ -134,26 +132,26 @@ If there is some issues, I'll try to fix those bugs within a month. Feel free to
 -   Added SetName, SetNameSequence for Unity Macro.
 -   Now Wrap Object with Parent respects target's parent.
 -   Fixed Foldout Style Fuckery.
--   Updated Hair Preview - Now you can preview your hair and texutres in Editor.
+-   Updated Hair Preview - Now you can preview your hair and textures in Editor.
 -   Added BaseBoneNavigator.
 
 ### 2020-06-28
 
 -   Updated Engine's Version to HS2's Unity Engine Version (2018.4.11f)
-    -   **Do not upgrade version with unity's feature. re-import everything so your stuffs are not going to break.**
+    -   **Do not upgrade version with unity's feature. re-import everything, so your stuffs are not going to break.**
 -   Added Preview Alpha
     -   Now you can preview your right without launching the game with binding helper.
     -   Binding helper will be combined with skin preview components.
     -   In the end it will be all-in-one preview system in one or two months.
 -   Re-designed Component Inspector
-    -   Now it's more easier to manage your mod's component.
+    -   Now it's easier to manage your mod's component.
 -   Reduced Human Error with more automated tasks
--   Moved Mod Component Initializing into Tranform Component Inspector.
+-   Moved Mod Component Initializing into Transform Component Inspector.
 -   Added and refined the examples
 -   Added Animation Example (Warning, it's really rough atm)
 -   Added Bunch of Macros and UI Improvements
 -   Initial Support for HS2 In-game Map Components - It works technically.
--   Added Anisotrophic shader alpha.
+-   Added Anisotropic shader alpha.
 -   Removed unused and big files from the project.
 
 #### What's about to come?
@@ -173,15 +171,15 @@ If there is some issues, I'll try to fix those bugs within a month. Feel free to
 -   Added Automatic Dynamic Bone Initializer
     -   WARNING: It will remove existing dynamic bones of the object automatically.
     -   TODO: Make it only remove automatically added dynamic bones.
--   Resolved CSVBuilder's Same-named Asset Naviation Issue.
+-   Resolved CSVBuilder's Same-named Asset Navigation Issue.
 -   Added FK Bone List support for CSVBuilder.
--   Changed UI Little Bit
+-   Reformed the UI
 -   Added Animation List Generator. It will fill out ItemComponent's Animation List based on Object's Animation Controllers.
 -   Added ModPack Testing method.
 -   Changed Temporary Folder location for zipping mod.
 -   WIP: XML Inspector...
 -   Merged Light Probe Intensity Adjustment into hooh's Tool Window.
--   Material generation for hair mods is changed.
+-   Changed Material generation for hair mods.
 -   Added XML Touch Tool for mod.xml Manipulation.
 -   Changed few shader's name.
 -   Added few shaders.
@@ -194,7 +192,7 @@ If there is some issues, I'll try to fix those bugs within a month. Feel free to
 -   Fixed Hair Render Object setup fuckery
 -   Now SB3U ScriptBuilder will include shader value adjustment.
 -   Added Deploy Mode for ModPacker (good for just checking things and debugging)
--   Now you can add bone informations for your items.
+-   Now you can add bone information for your items.
 -   Now List Generator automatically put list items in mod.xml
 
 ## 0.2.0
@@ -202,7 +200,7 @@ If there is some issues, I'll try to fix those bugs within a month. Feel free to
 ### 2020-01-09
 
 -   Moved Light Probe Intensity tool to hooh Modding Tool Window.
--   Now Foldout status are being saved after closing editor/updating code.
+-   Now Foldout status will be saved after closing editor/updating code.
 
 ### 2020-01-08
 
@@ -219,7 +217,7 @@ If there is some issues, I'll try to fix those bugs within a month. Feel free to
 -   Moved Material Swapping into separate class.
 -   Now texture swap is optional.
 -   Now alerts you when there is no mod.xml in current Project Folder.
--   Made Probe Intensitry public. It's going to be combined in same menu.
+-   Made Probe Intensity public. It's going to be combined in same menu.
 -   Added a lot of examples.
 
 ## 0.1.0
@@ -233,13 +231,13 @@ If there is some issues, I'll try to fix those bugs within a month. Feel free to
     -   Now it initializes dynamic bones automatically.
     -   Now it initializes hair preview tools automatically.
 -   Example: Added Skin Paint Example.
--   Added Open Folder Option when modbuilder completes mod build.
+-   Added Open Folder Option when Mod Builder completes mod build.
     -   When you click Open Folder, it will open your zipmod destination folder.
 -   Example: Updated hair example.
     -   Updated mod.xml comments and structure.
     -   Updated blender source files.
     -   Changed noise.png to 2x res noise texture.
 -   Updated Shader Code.
-    -   You can use Opaque Shader when you're making non-transparent clothes that will not torn. useful things like socks or small clothes.
-    -   Now Glossiness and Metalic adjustments are working.
+    -   You can use Opaque Shader when you're making non-transparent clothes that will not tear. useful things like socks or small clothes.
+    -   Now Glossiness and Metallic adjustments are working.
 -   Added Changelogs.

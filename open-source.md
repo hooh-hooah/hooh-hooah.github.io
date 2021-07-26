@@ -2,7 +2,7 @@
 
 This modding tool couldn't be made without helps from many talented people.
 
-Here by I show my respect to those contributers and mentors.
+Here by I show my respect to those contributors and mentors.
 
 ## Main-Game Plugins
 
