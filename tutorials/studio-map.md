@@ -1,8 +1,6 @@
 # Creating Custom Studio Map
 
-## Related Documents
-
-If you need more basic information like setup folders or preparing hair assets, please visit the pages below before continuing to read this document:
+[kind-introduction](../common/tutorial-introduction.md ':include')
 
 -   [Getting Started with the hooh's Modding Tool](getting_started.md)
 -   [Setting up Folder](tutorials/gearing-up.md)

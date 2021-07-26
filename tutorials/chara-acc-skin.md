@@ -10,11 +10,7 @@ Skinned Accessory is a plugin/mod that allows the modders to make clothing worki
 
 Skinned Accessory will allow people to add layers to their clothing or use another shader for the body's new overlay, such as a glowing tattoo.
 
-## Related Documents
-
-This page only contains how to put accessories into the game with adjustable attributes.
-
-If you need more basic information like setup folders or preparing hair assets, please visit the pages below before continuing to read this Document:
+[kind-introduction](../common/tutorial-introduction.md ':include')
 
 -   [Getting Started with the hooh's Modding Tool](/getting_started.md)
 

@@ -120,7 +120,7 @@ It will automatically assign the thumbnails, asset bundle names, and the manifes
 
 If nothing is getting generated, check if you properly registered the Mod XML files assets.
 
-Also, there is one exception for the map thumbnails. For Map Thumbnails, all of the map thumbnails must comply following name format:
+Also, there is one exception for the map thumbnails. For Map Thumbnails, all the map thumbnails must comply following name format:
 `{Scene Asset Name}_thumb_s` for small thumbnail for Free-H
 `{Scene Asset Name}_thumb_l` for large thumbnail for Event Map
 
@@ -145,7 +145,7 @@ If you hate automatic generation, you can put everything manually.
 
 ### Setting up SceneInfo
 
-The modding tool will generate the event scene info. So, don't worry.
+The modding tool will generate the Event Scene Info. So, don't worry.
 
 ### Setting up Collider
 
@@ -153,33 +153,7 @@ The modding tool will generate the event scene info. So, don't worry.
 
 ### Creating Mod XML
 
-```xml
-<packer>
-    <guid>example.studio.map</guid>
-    <name>My First Studio Map</name>
-    <version>1.0.0</version>
-    <author>My Name</author>
-    <description>My first outfit mod</description>
-    <options>
-         <!--
-            If you're planning to release studio items with the map,
-            I recommend you to put use-dependency on option for more
-            perfomance and smaller size of zipmod.
-          -->
-          <use-dependency />
-    </options>
-    <bundles>
-        <folder auto-path="thumbs" from="map_thumbs" filter=".*\.png"/>
-        <folder auto-path="maps" from="map00" filter=".*\.unity" target="map00"/>
-        <folder auto-path="mapdata" from="map00" filter=".*\.asset" target="map00" />
-    </bundles>
-    <build>
-        <list type="map">
-            <item name="My First Studio Map" scene="map_00" />
-        </list>
-    </build>
-</packer>
-```
+[xml common tip](../examples/hs2-map.xml ':include')
 
 [xml common tip](../common/xml-common.md ':include')
 

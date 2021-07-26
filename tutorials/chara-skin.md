@@ -1,17 +1,13 @@
 # Creating Custom Skins
 
-## Related Documents
-
-This page only contains how to put hair models into the game with adjustable attributes.
-
-If you need more basic information like setup folders or preparing hair assets, please visit the pages below before continuing to read this Document:
+[kind-introduction](../common/tutorial-introduction.md ':include')
 
 -   [Getting Started with the hooh's Modding Tool](getting_started.md)
 -   [Setting up Folder](tutorials/gearing-up.md)
 
 ## Steps
 
-### Creating Textrure
+### Creating Textures
 
 ![](imgs/skn_00.png)
 
@@ -24,9 +20,9 @@ ILLUSION's shaders are using custom textures for the face textures. So, You need
     | -- | ------ |
     | Red | Glossiness |
     | Green | Occlusion |
-    | Blue | Translucensy |
+    | Blue | Translucency |
 
-Don't forget to set your image to 16-bit Color Depth. Otherwise, you're going to get a lot of blocky artifacts to your custom Texture.
+Don't forget to set your image to 16-bit Color Depth. Otherwise, you're going to get a lot of artifacts to your custom Texture.
 
 ### Importing Texture
 
@@ -88,10 +84,10 @@ Assign Textures that you want to test in the component. You can assign textures 
 
 [building the mod](../common/building-mod.md ':include')
 
-[trouble shooting](../common/trouble-shooting.md ':include')
+[troubleshooting](../common/trouble-shooting.md ':include')
 
 ### My Tattoo is repeating all over the skincare
 
-The Texture's import option is wrong. All of the tattoo, chests, and other paint parts must be in `Clamp` Wrap Mode.
+The Texture's import option is wrong. All the tattoo, chests, and other paint parts must be in `Clamp` Wrap Mode.
 
 You can set the **Wrap Mode** by clicking your Texture and search around the middle of the menu.

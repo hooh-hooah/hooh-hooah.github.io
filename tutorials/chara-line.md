@@ -1,21 +1,17 @@
 # Creating Custom Eyeshadows
 
-## Related Documents
-
-This page only contains how to put hair models into the game with adjustable attributes.
-
-If you need more basic information like setup folders or preparing hair assets, please visit the pages below before continuing to read this Document:
+[kind-introduction](../common/tutorial-introduction.md ':include')
 
 -   [Getting Started with the hooh's Modding Tool](getting_started.md)
 -   [Setting up Folder](tutorials/gearing-up.md)
 
 ## Steps
 
-### Creating Textrure
+### Creating Textures
 
 Making Eyeshadow is a bit tricky. You can start making eyeshadow faster by using one of template available in the project.
 
-You can find all knid of examples in the modding tool's `Examples` Folder.
+You can find all kind of examples in the modding tool's `Examples` Folder.
 
 ### Importing Texture
 
@@ -72,10 +68,10 @@ In this case, Each custom eyeshadow only requires one file per an item in the li
 
 [building the mod](../common/building-mod.md ':include')
 
-[trouble shooting](../common/trouble-shooting.md ':include')
+[troubleshooting](../common/trouble-shooting.md ':include')
 
-### Uh.. My Tatto is repeating all over the skin/face!
+### Uh.. My Tattoo is repeating all over the skin/face!
 
-The Texture's import option is wrong. All of the tattoo, chests, and other paint parts must be in `Clamp` Wrap Mode.
+The Texture's import option is wrong. All the tattoo, chests, and other paint parts must be in `Clamp` Wrap Mode.
 
 You can set the **Wrap Mode** by clicking your Texture and search around the middle of the menu.

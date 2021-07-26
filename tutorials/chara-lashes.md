@@ -1,10 +1,6 @@
 # Creating Custom Eyelashes
 
-## Related Documents
-
-This page only contains how to put hair models into the game with adjustable attributes.
-
-If you need more basic information like setup folders or preparing hair assets, please visit the pages below before continuing to read this Document:
+[kind-introduction](../common/tutorial-introduction.md ':include')
 
 -   [Getting Started with the hooh's Modding Tool](/getting_started.md)
 -   [Setting up Folder](/tutorials/gearing-up.md)
@@ -84,7 +80,7 @@ Assign Textures that you want to test in the component. You can assign textures 
 
 [building the mod](../common/building-mod.md ':include')
 
-[trouble shooting](../common/trouble-shooting.md ':include')
+[troubleshooting](../common/trouble-shooting.md ':include')
 
 ### My Tattoo is repeating all over the skincare
 

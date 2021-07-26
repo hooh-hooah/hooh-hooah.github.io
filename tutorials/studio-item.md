@@ -1,10 +1,6 @@
 # Creating Custom Studio Item
 
-## Related Documents
-
-This page only contains how to put existing 3d models into the game with adjustable attributes.
-
-If you need more basic information like setup folders or preparing hair assets, please visit the pages below before continuing to read this document:
+[kind-introduction](../common/tutorial-introduction.md ':include')
 
 -   [Getting Started with the hooh's Modding Tool](getting_started.md)
 -   [Setting up Folder](tutorials/gearing-up.md)
@@ -115,7 +111,7 @@ You can easily start out making new Mod XML files by right-clicking in the folde
 
     ![1600689487533](images\1600689487533.png)
 
--   Go to the prefab folder where prefabs are stored.
+-   Go to the prefab folder.
 
 -   Drag and drop prefabs to the "Prefabs to put in XML file". You can drag multiple objects by dragging objects right above the text.
 
@@ -167,8 +163,8 @@ _Difficulty: Sloth_
 
 ![](imgs/dryrun.png)
 
--   Press the "Dry Run" Button inside of the Mod Builder Menu.
--   If everything is good, it will not display any message but a nice blip sound.
+-   Press the "Dry Run" Button inside the Mod Builder Menu.
+-   If everything is good, it will play nice beep sound.
 -   If something went wrong, it will display some dialog and print detailed information to the unity console.
 -   You can open the unity console with the "Ctrl+Shift+C" key anywhere.
 
@@ -184,9 +180,9 @@ _Difficulty: Low_
 
     ![1600689442803](images\1600689442803.png)
 
--   Make sure your studio items are registered inside of mod.xml (Studio Thumbnail Generator will only generate registered items inside of mod.xml)
+-   Register the studio items inside of mod.xxml (Studio Thumbnail Generator will only generate registered items inside of mod.xml)
 
--   Drag and drop prefabs to Thumbnail Generator (or press the "Add Folder" Button to register all of the prefabs inside the folder that you're looking at)
+-   Drag and drop prefabs to Thumbnail Generator (or press the "Add Folder" Button to register all the prefabs inside the folder that you're looking at)
 
 -   Press the "Generate Thumbnails" Button to generate thumbnails.
 
@@ -214,8 +210,8 @@ _Difficulty: Chad_
 -   All of your custom components need to have a custom namespace to be loaded with the Asset Bundle natively.
 -   You can set up a custom namespace with the "Assembly Definition" feature in the Unity. I suggest you read the official document before trying it out by yourself.
 -   Your custom plugin must have the same namespace as Assembly Definition you've registered in your unity project.
--   You need to code your own control UI and Save/Load values to adjust values on the go in a nice manner.
--   Do not include editor features inside of the component. please filter them out with pre-processor block
+-   You need to code your own control UI and Save/Load values to adjust values on the go in the nice manner.
+-   Do not include editor features inside the component. please filter them out with pre-processor block
 
 ### When you have to animate your studio item
 

@@ -1,5 +1,10 @@
 # Preparing Hair Mesh
 
+[kind-introduction](../common/tutorial-introduction.md ':include')
+
+-   [Getting Started with the hooh's Modding Tool](/getting_started.md)
+-   [Setting up Folder](/tutorials/gearing-up.md)
+
 ## Intro
 
 This tutorial is for 3D Modeling Software called Blender. It is free, Open Source, and easy to learn (maybe).

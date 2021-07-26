@@ -1,10 +1,6 @@
 # Creating Custom Hairs
 
-## Related Documents
-
-This page only contains how to put hair models into the game with adjustable attributes.
-
-If you need more basic information like setup folders or preparing hair assets, please visit the pages below before continuing to read this document:
+[kind-introduction](../common/tutorial-introduction.md ':include')
 
 -   [Getting Started with the hooh's Modding Tool](/getting_started.md)
 -   [Setting up Folder](/tutorials/gearing-up.md)
@@ -66,4 +62,4 @@ It would be best to import all textures, models, and all other required assets t
 2. All preview is temporary to the session. Restarting unity might break the texture.
 
 
-[trouble shooting](../common/trouble-shooting.md ':include')
+[troubleshooting](../common/trouble-shooting.md ':include')

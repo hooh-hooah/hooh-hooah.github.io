@@ -1,13 +1,8 @@
 # Creating Custom Gloves/Shoes
 
-## Related Documents
-
-This page only contains how to put hair models into the game with adjustable attributes.
-
-If you need more basic information like setup folders or preparing hair assets, please visit the pages below before continuing to read this document:
+[kind-introduction](../common/tutorial-introduction.md ':include')
 
 -   [Getting Started with the hooh's Modding Tool](/getting_started.md)
-
 -   [Setting up Folder](/tutorials/gearing-up.md)
 
 ## Additional Notes for Preparing the Asset
@@ -20,63 +15,11 @@ The `Mirror Modifier` will allow you to copy the mesh and mirror the vertex grou
 
 ## Steps
 
-### Setting Up Assets
-
-!> `.OBJ` format does not support FK studio items. Ensure that you're importing `.FBX` format 3D Mesh Files to make FK works on the model.
-
-In this Document, I assume that you've read the previous Document that lets you know how to make the 3d model for character clothing.
-
-If you haven't checked the Document yet, here is the link to the Document: [Creating Clothing Mesh](/prepping/clothing-mesh.md)
-
-First, put the model to the scene. The hierarchy does not matter, But make sure that `Clothing Tester`, and you're clothing are in the same position, angles, and scale.
+[setup-char](../common/setup-char-mesh.md ':include')
 
 ![](imgs/glv_00.png)
 
-### Initializing the Component
-
-![](imgs/chara_00.png)
-
-When you've done putting your mesh to the scene, click it, navigate the right panel, and click the `Initialize Modding Components > Common > Clothing` button.
-
-Then the Modding Tool will automatically find the references in your model and initialize everything to make your model work in the game.
-
-### Validating Component
-
-![](imgs/com_00.png)
-
-Just in case when you didn't set things as the Document, you can manually review the component to check if it's going to work correctly in the game.
-
--   **Visible Renderers**
-
-    First, if every `Skinned Mesh Renderer` is included in "Visible Renderers", you're good to go.
-
--   **Texture Render Objects**
-
-    Second, There is "Texture X Render Object" below. To explain what they're for, you need to know that ILLUSION renders a new clothing texture when you change the game's color or clothing pattern.
-
-    For that purpose, you can assign a maximum of 3 sets of colormask and diffuse textures in the Mod XML File.
-
-    Each "Texture Render Object" group represents for each set of diffuse and colormask in the Mod XML File.
-
-    Most of the case, we're going to use a single texture for the clothing so check that every renderer listed in Texture 1 Render Object.
-
--   **Options**
-
-    You can assign toggleable optional meshes for the clothing but remember that you can't toggle optional state in-game.
-
--   **Cloth Object Assignment**
-
-    For Gloves, Shoes, or Socks, You don't have to assign the object in this section since they're not referencing this section. There is a warning in the inspector, but as the message says, it's irrelevant if you're not making the top or bottom part.
-
--   **Cloth Colors**
-
-    Well, as the title says, this is the color information of your clothing. If you enable each color option, you can color your outfit in the game.
-
-    Unfortunately, you can't adjust a few sliders in the game if you're using the standard shader. To use all the game options, you must use `Clothing Shader Replica` for your clothing material.
-
-    You can find all the included shader information inside the [Shader Information](/technical/shaders.md) Document.
-
-    You can find all the information about the included shader inside the [Shader Information](/technical/shaders.md) Document.
+[setup-char](../common/setup-clothing-component.md ':include')
 
 ### Setting Colormask
 
@@ -156,4 +99,4 @@ Test your clothes working in-game.
 I recommend 2155x's makersearch to save your time
 
 
-[trouble shooting](../common/trouble-shooting.md ':include')
+[troubleshooting](../common/trouble-shooting.md ':include')
