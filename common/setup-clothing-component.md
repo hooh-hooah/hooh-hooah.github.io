@@ -1,9 +1,13 @@
 
 ### Initializing the Component
 
-![](imgs/chara_00.png)
+![](imgs/070_mod_02.png)
 
-When you've done putting your mesh to the scene, click it, navigate the right panel, and click the `Initialize Modding Components > Common > Clothing` button.
+When you've done putting your mesh to the scene, Go to the `hooh Tool` Window.
+
+If you cannot find the `hooh Tool` window, Press `ALT` key and check the upper menu.
+
+After opening the `hooh Tool` Window, Navigate to the `Initialize Modding Components > Common > Clothing` Button.
 
 Then the Modding Tool will automatically find the references in your model and initialize everything to make your model work in the game.
 
