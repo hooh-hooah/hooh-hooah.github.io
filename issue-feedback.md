@@ -16,7 +16,7 @@ If you don't want to expose your identity, consider using third party e-mail acc
 
 Just one thing. **PLEASE ATTACH `output_log.txt` FILE with the Issues!**. If you don't attach `output_log.txt` file with the issues, The probability of getting the answer will get low as AAA lootboxes.
 
-You can find the `output_log.txt` file in the root folder of the game.
+You can find the `output_log.txt` file in the root folder of the game   .
 
 Also don't forget to attach the visual references such as Videos and Screenshots.
 
