@@ -83,6 +83,6 @@ You can find all of the examples in the `Modding Examples` folder. Countless Mod
 
 Try to make your own mods based on the template. Don't worry when you've lost few original templates. The modding tool repository is always accessible!
 
-## Post-scriptum
+## Yay
 
 Congrats! Now you're ready to start modding AI/HS2 Game!

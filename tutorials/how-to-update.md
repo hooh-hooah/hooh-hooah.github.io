@@ -15,3 +15,5 @@ From now, If you're updated your modding tool to 0.7.0+, You can update the Modd
 1. Open `ProjectRoot/Packages/manifest.json` file.
 2. Navigate to the `com.hooah.moddingtool` section and remove the line that starts with "hash".
 3. If you want to update the Modding Tool Example, Go to `com.hooah.moddingtool.example` then remove the line that stats with "hash".
+
+[trouble shooting](../common/trouble-shooting.md ':include')
