@@ -2,6 +2,7 @@
 -   **General**
     -   [Getting Started](getting_started.md)
     -   [General Questions](general-question.md)
+    -   [Updating the Modding Tool](tutorials/how-to-update.md)
     -   [Reporting Issue/Feedback](issue-feedback.md)
     -   [Objectives/Roadmap](goals.md)
     -   [Changelogs](changelogs.md)
