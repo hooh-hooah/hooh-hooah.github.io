@@ -126,6 +126,6 @@ op.axis_forward = '-Z'
 op.axis_up = 'Y'
 ```
 
-## Trouble Shooting
+## Troubleshooting
 
-!> If you can't find the issue here, then check [**Trouble Shooting**](tutorials/trouble-shooting.md) page.
+!> If you can't find the issue here, then check [**Troubleshooting**](tutorials/trouble-shooting.md) page.

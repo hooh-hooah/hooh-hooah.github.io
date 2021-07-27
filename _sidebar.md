@@ -10,10 +10,10 @@
 -   **Prepping Assets**
     -   [Creating Clothing Mesh](prepping/clothing-mesh.md)
     -   [Creating Hair Mesh](prepping/hair-mesh.md)
-    -   ~~Creating Head Mesh~~ (WIP)
+    -   [~~Creating Head Mesh~~ (WIP)]()
 -   **Modding Tutorials**
     -   [Setting up Folder](tutorials/gearing-up.md)
-    -   [Trouble Shooting](tutorials/trouble-shooting.md)
+    -   [Troubleshooting](tutorials/trouble-shooting.md)
     -   **Character**
     -   [Character Hair](tutorials/chara-hair.md)
     -   [Character Tattoo/Paint](tutorials/chara-paint.md)
@@ -30,21 +30,21 @@
     -   [Studio Maps](tutorials/studio-map.md)
     -   **Honey Select 2 : Libido**
     -   [Custom Map](tutorials/hs2-map.md)
-    -   ~~Custom Scenario~~ (WIP, Q4)
+    -   [~~Custom Scenario~~ (WIP, Q4)]()
     -   **AI-Shoujyo**
-    -   ~~Custom Furniture~~ (WIP, Q4)
-    -   ~~Custom Map~~ (WIP, Q4)
-    -   ~~Custom Scenario~~ (WIP, Q4)
+    -   [~~Custom Furniture~~ (WIP, Q4)]()
+    -   [~~Custom Map~~ (WIP, Q4)]()
+    -   [~~Custom Scenario~~ (WIP, Q4)]()
 -   **Technical Modding**
-    -   ~~Custom Plugin~~ (TBD)
-    -   ~~Generic Automation~~ (TBD)
+    -   [~~Custom Plugin~~ (TBD)]()
+    -   [~~Generic Automation~~ (TBD)]()
 -   **Technical Details**
-
     -   [Shader Informations](technical/shaders.md)
     -   [Plugin Dependency](technical/plugins.md)
     -   [XML File Structure](technical/xml-file.md)
     -   [Auto-Path Lists](technical/autopath-list.md)
     -   [XML List Types](technical/category-list.md)
+        -   **List Files**
         -   [Accessory List](technical/category-list-acc.md)
         -   [Female List](technical/category-list-female.md)
         -   [Male List](technical/category-list-male.md)

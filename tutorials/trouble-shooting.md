@@ -1,4 +1,4 @@
-# Trouble Shooting
+# Troubleshooting
 
 Something is not going well? Fortunately I already suffered from the issues that you've been experiencing.
 

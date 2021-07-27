@@ -183,11 +183,11 @@ If you can see your model inside of the `Meshes To Test` list, then you're good 
 
 When you go Play Mode and press "Test Clothing Mesh in Play Mode", you can see the meshes following the animation's character.
 
-If the model is not following the bones, then you can check the Trouble Shooting section below.
+If the model is not following the bones, then you can check the Troubleshooting section below.
 
-## Trouble Shooting
+## Troubleshooting
 
-!> If you can't find the issue here, then check [**Trouble Shooting**](tutorials/trouble-shooting.md) page.
+!> If you can't find the issue here, then check [**Troubleshooting**](tutorials/trouble-shooting.md) page.
 
 ### Mesh is not following the character
 
