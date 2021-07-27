@@ -1,6 +1,6 @@
-# Reporting Issue/Feedback
+# Reporting the Issues/Feedbacks
 
-Sometimes, things would not go well due to the evil practice of mine or the slipped stone made inside your shoes.
+We all hate goblins. However, they keep manage to come and sneak under our beds.
 
 In that case, you need to stop for a second and check if it's your mistake or my mistake.
 
@@ -8,20 +8,16 @@ When it's not your fault, you need to let people know something went wrong.
 
 ## How to report Modding Tool Issue
 
-* Where to report
+If something is not working well in the Modding Tool, Please submit a ticket in [the GitHub Project Issues Tracker Page](https://github.com/IL-Modding-Tool/Modding-Tool-Unity-Package).
 
-* What to write
-
-* How long it will take to get fixed
+If you don't want to expose your identity, consider using third party e-mail accounts (Like [ProtonMail](https://protonmail.com)) with un-traceable aliases.
 
 ## How to report Plugin Issue (For ALL BepinEx plugins)
 
-* Where to report
+Just one thing. **PLEASE ATTACH `output_log.txt` FILE with the Issues!**. If you don't attach `output_log.txt` file with the issues, The probability of getting the answer will get low as AAA lootboxes.
 
-* What to write
+You can find the `output_log.txt` file in the root folder of the game.
 
-* How long it will take to get fixed
+Also don't forget to attach the visual references such as Videos and Screenshots.
 
-## How to make your fix official
-
-* Where to put
+If I can't figure out what's wrong with your words, I simply can't fix the issues since I can't figure out what's wrong.
