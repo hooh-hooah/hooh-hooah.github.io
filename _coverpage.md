@@ -11,4 +11,4 @@
 - Just nut and go.
 
 [GitHub](https://github.com/hooh-hooah/ModdingTool)
-[Get Started](#hooh39s-modding-tool)
+[Get Started](#hooh39s-modding-tool)<!-- @IGNORE PREVIOUS: anchor -->
