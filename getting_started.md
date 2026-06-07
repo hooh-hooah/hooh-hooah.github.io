@@ -1,4 +1,4 @@
-# Getting Started test
+# Getting Started
 
 ## Required Programs
 
