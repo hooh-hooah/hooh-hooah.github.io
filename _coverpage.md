@@ -1,6 +1,7 @@
 <!-- _coverpage.md -->
 
 # 2018+ ILLUSION MODDING TOOL <small>0.7.0</small>
+# MGT update coming soon</small>
 
 > Only you can understand what you want.
 > This is the nut cracker for you.
